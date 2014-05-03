@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping >
+	<class name="com.flower.domain.Board" table="t_board">
+		<id name="boardId" column="board_id">
+			<generator class="identity" />
+		</id>
+		<property name="boardName" column="board_name" />
+		<property name="boardDesc" column="board_desc" />
+		<property name="topicNum" column="topic_num" />
+	</class>
+</hibernate-mapping>

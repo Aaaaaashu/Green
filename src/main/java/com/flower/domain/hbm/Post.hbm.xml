@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<class name="com.flower.domain.Post" table="t_post" discriminator-value="2">
+		<id name="postId" column="post_id">
+			<generator class="identity" />
+		</id>
+		<discriminator column="post_type"/>
+		<property name="postTitle" column="post_title" />
+		<property name="postText" column="post_text" />
+		<property name="createTime" column="create_time" type="date" />
+        <property name="topicId" column="topic_id"/>
+        <property name="boardId" column="board_id"/>
+        <many-to-one name="user" column="user_id" class="com.flower.domain.User"/>
+	    <subclass name="com.flower.domain.MainPost" discriminator-value="1"/>
+	</class>
+</hibernate-mapping>
