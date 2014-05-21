@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
     ">
     <!-- 数据访问层配置 -->
-    <import resource="classpath:/baobaotao-dao.xml" />
+    <import resource="classpath:/flower-dao.xml" />
      <!--服务层配置 -->
-    <import resource="classpath:/baobaotao-service.xml" />
+    <import resource="classpath:/flower-service.xml" />
 </beans>
