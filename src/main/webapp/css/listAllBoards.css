@@ -1,0 +1,102 @@
+.card {
+	margin-top: 75px;
+	margin-bottom: 55px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 940px;
+	height: 280px;
+	background-color: rgba(255,255,255,0.6);
+}
+
+.card-1 {
+	margin-top: 120px;
+	background-image: url("/Green/images/flowers/cerasus-bg.png");
+}
+
+.card-2 {
+	background-image: url("/Green/images/flowers/baby-breath-bg.png");
+}
+
+.card-3 {
+	background-image: url("/Green/images/flowers/daisy-bg.png");
+}
+
+.card-4 {
+	background-image: url("/Green/images/flowers/calla-bg.png");
+}
+
+.card-5 {
+	background-image: url("/Green/images/flowers/rose-bg.png");
+}
+
+.card-1 .ih-item,
+.card-3 .ih-item,
+.card-5 .ih-item {
+ 	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.card-1 .card-content,
+.card-3 .card-content,
+.card-5 .card-content {
+	float: left;
+	padding-left: 60px;
+	padding-top: 36px;
+	width: 600px;
+}
+
+.card-2 .card-content,
+.card-4 .card-content {
+	float: left;
+	padding-left: 60px;
+	padding-top: 36px;
+	width: 600px;
+}
+
+.card-2 .ih-item,
+.card-4 .ih-item { 
+	float: left;
+	margin-left: 60px;
+	margin-top: 36px;
+} 
+
+.card-1 .card-content h3 {
+	font-size: 42px;
+	font-weight: 100;
+	color: rgba(236, 148, 158, 0.7);
+}
+
+.card-2 .card-content h3 {
+	font-size: 42px;
+	font-weight: 100;
+	color: rgba(99, 201, 226, 0.7);
+}
+
+.card-3 .card-content h3 {
+	font-size: 42px;
+	font-weight: 100;
+	color: rgba(240, 245, 180, 0.7);
+}
+
+.card-4 .card-content h3 {
+	font-size: 42px;
+	font-weight: 100;
+	color: rgba(92, 203, 231, 0.7);
+}
+
+.card-5 .card-content h3 {
+	font-size: 42px;
+	font-weight: 100;
+	color: rgba(240, 33, 49, 0.7);
+}
+.ih-item.circle.effect10 .info {
+	background: rgba(40, 82, 71, 0.6)
+}
+
+.ih-item.circle.effect6 .info {
+	background: rgba(40, 82, 71, 0.6)
+}
+

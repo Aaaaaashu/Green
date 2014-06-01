@@ -1,0 +1,167 @@
+.content {
+	margin-top: 72px;
+}
+
+.form-group {
+	display: none;
+}
+
+.btn {
+	margin-top: 10px;
+	float: right;
+}
+
+.topic-title {
+	width: 780px;
+	height: 52px;
+	background-color: rgba(211, 214, 213, 0.7);
+	margin-top: 28px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-size: 26px;
+	padding: 10px;
+}
+
+/*********/
+.tips {
+	float: right;
+	margin-right: 28px;
+	width: 300px;
+}
+
+.tips-header {
+	height: 30px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: rgba(211, 214, 213, 0.7);
+	margin-top: 27px;
+}
+
+.tips-content-1 {
+	padding-right: 108px;
+	height: 120px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #fff;
+}
+
+.tips-content-1 .btn-success {
+	margin-left: 110px;
+	margin-top: 40px;
+	background-color: rgba(18, 202, 99, 0.7);
+	border-color: #09E409;
+}
+
+.tips-content-2 {
+	margin-top: 15px;
+	height: 360px;
+	border-radius: 5px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.tips-content-2 h2 {
+	font-size: 16px;
+	font-weight: normal;
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+	padding: 10px 126px 0;
+	margin-bottom: 8px;
+	color: #666;
+	line-height: 100%;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 8px;
+}
+
+.tips-content-2 div {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+
+/**********/
+
+.posts-wrapper {
+	width: 780px;
+}
+
+.posts {
+	float: left;
+	margin-bottom: 6px;
+	width: 780px;
+	background-color: #fff;
+}
+
+.avatar {
+	float: left;
+	margin: 10px;
+	width: 48px;
+	height: 48px;
+}
+
+.post-info {
+	margin-top: 10px;
+	width: 780px;
+}
+
+.post-info small {
+	padding-right: 3px;
+	color: #aaa;
+}
+
+.glyphicon {
+	padding-right: 6px;
+}
+.post-text {
+	padding: 6px;
+	margin-left: 62px;
+	padding-right: 72px;
+}
+
+
+
+/* .fly {
+	position: relative;
+	width: 230px;
+	height: 480px;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	list-style: none;
+	-webkit-perspective: 400px;
+	-moz-perspective: 400px;
+	-ms-perspective: 400px;
+	-o-perspective: 400px;
+	perspective: 400px;
+}
+
+.fly li {
+	position: relative;
+	padding: 16px;
+	background: #eee;
+	color: #252525;
+	font-size: 18px;
+	z-index: 2;
+	-webkit-transform: translateZ(0px);
+	-moz-transform: translateZ(0px);
+	-ms-transform: translateZ(0px);
+	-o-transform: translateZ(0px);
+	transform: translateZ(0px);
+}
+
+.fly li:nth-child(odd) {
+	background: #fff;
+} */
+
+/**************/
+
+
+.pagebar {
+	width: 780px;
+}
+
+form {
+	margin-bottom: 36px;
+}

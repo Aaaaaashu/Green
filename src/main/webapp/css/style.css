@@ -1,0 +1,75 @@
+body {
+	background-image: url("/Green/images/rockywall.png");
+}
+
+.badge {
+	background-color: rgba(37, 119, 196, 0.7);
+}
+/***** Header ******/
+.header {
+	position: fixed;
+	top: 0px;
+	margin-left: 0px;
+	margin-bottom: 130px;
+	width: 100%;
+	height: 55px;
+	border-top: solid 4px rgba(101, 228, 157, 0.7);
+	border-bottom: solid 1px #eaeaea;
+	background-color: rgba(255,255,255,0.7);
+	z-index: 500;
+}
+
+.header a {
+	color: #999;
+}
+
+a:hover {
+	color: #53bf6b;
+}
+
+.search input{
+	margin-right: 10px;
+}
+
+/***** Footer ******/
+hr {
+	margin-bottom: 0px;
+}
+
+footer {
+	background-color: rgba(255,255,255,0.6);
+}
+
+footer.container {
+	height: 86px;
+	width: 940px;
+}
+
+footer p {
+	margin-top: 10px;
+	color: rgba(101, 228, 157, 0.7);
+}
+
+.social-icon a:hover {
+	-webkit-filter: brightness(.8);
+}
+
+.arrow-up img:hover {
+	border-radius: 50%;
+	background-color: rgba(101, 228, 157, 0.7);
+}
+
+.social-icon a {
+	padding-left: 8px;
+}
+
+.social-icon,
+.arrow-up {
+	margin-top: 18px;
+}
+
+.arrow-up {
+	padding-top: 8px;
+}
+
+
