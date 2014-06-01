@@ -2,17 +2,17 @@
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	version="2.4"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-  	
-  	<description>FlowerBBS</description>
-  	<display-name>FlowerBBS</display-name>
-  	<context-param>
-  		<param-name>contextConfigLocation</param-name>
-  		<param-value>classpath:/applicationContext.xml</param-value>
-  	</context-param>
-  	<listener>
-  		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  	</listener>
-  	<filter>
+
+	<description>Green</description>
+	<display-name>Green</display-name>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:/applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<filter>
 		<filter-name>hibernateFilter</filter-name>
 		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
 	</filter>
@@ -26,7 +26,7 @@
 	</filter-mapping>
 	<filter>
 		<filter-name>forumFilter</filter-name>
-		<filter-class>com.flower.web.ForumFilter</filter-class>
+		<filter-class>com.green.web.ForumFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>forumFilter</filter-name>
@@ -57,28 +57,46 @@
 		<url-pattern>*.jsp</url-pattern>
 	</filter-mapping>
 	<servlet>
-		<servlet-name>flower</servlet-name>
+		<servlet-name>green</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>3</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>flower</servlet-name>
+		<servlet-name>green</servlet-name>
 		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	<servlet-name>default</servlet-name>
+		<url-pattern>*.js</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/images/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/fonts/*</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>default</servlet-name>
 		<url-pattern>/static/*</url-pattern>
 	</servlet-mapping>
-	
+	<!-- 浏览器不支持put,delete等method,由该HiddenHttpMethodFilter将xxx?_method=delete 
+		或 xxx?_method=put 转换为标准的 http delete、put 方法 -->
 	<filter>
 		<filter-name>HiddenHttpMethodFilter</filter-name>
 		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>HiddenHttpMethodFilter</filter-name>
-		<servlet-name>flower</servlet-name>
+		<servlet-name>green</servlet-name>
 	</filter-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
+

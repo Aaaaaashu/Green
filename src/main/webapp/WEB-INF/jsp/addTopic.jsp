@@ -1,60 +1,64 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>发表新话题</title>
-	<script>
-	   function mySubmit(){
-	      with(document){
-	         var topicTitle = getElementById("topicTitle");
-	         if(topicTitle.value == null || topicTitle.value.length ==0){
-	            alert("话题标题不能为空，请填上.");
-	            topicTitle.focus();
-	            return false;
-	         }else if(topicTitle.value.length > 100){
-	            alert("话题标题最大长度不能超过100个字符，请调整.");
-	            boardName.focus();
-	            return false;
-	         }
-	          
-	         var postText = getElementById("mainPost.postText");
-	         if(postText.value == null || postText.value.length < 10 ){
-	            alert("话题的内容必须大于10个字符");
-	            postText.focus();
-	            return false;
-	         }
-	           
-	         return true;
-	      }
-	      
-	   }
-	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<c:set value="${pageContext.request.contextPath}" var="path" scope="page" />
+	
+	<link href="${path}/css/bootstrap.min.css" rel="stylesheet">
+	<link href="${path}/css/bootstrap-wysihtml5.css" rel="stylesheet">
+	
+	<script src="${path}/js/wysihtml5-0.3.0.min.js"></script>
+    <script src="${path}/js/jquery-1.7.2.min.js"></script>
+    <script src="${path}/js/bootstrap.min.js"></script>
+    <script src="${path}/js/bootstrap3-wysihtml5.js"></script>
+    
+    <link href="${path}/css/addTopic.css" rel="stylesheet">
+    <link href="${path}/css/style.css" rel="stylesheet">
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+	<title>發佈新帖</title>
 </head>
+
 <body>
-<%@ include file="includeTop.jsp" %> 
-<form action="<c:url value="/board/addTopic.html" />" method="post" obsubmit="return mySubmit()">
-<table border="1px" width="100%">
-	<tr>
-		<td width="20%">标题</td>
-		<td width="80%">
-		<input style="width:80%;"  name="topicTitle" value="${topic.topicTitle}">
-	</tr>
-	<tr>
-		<td width="20%">内容</td>
-		<td width="80%">
-		<textarea style="width:100%;height:400px"  name="mainPost.postText">${topic.mainPost.postText}</textarea>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" align="right">
-		   <input type="submit" value="保存">
-		   <input type="reset" value="重置">
-		   <input type="hidden" name="boardId" value="${boardId}"> 
-		</td>
-	</tr>
-</table>
-</form>
+  <%@ include file="header.jsp" %>		
+  	<form class="container" action="<c:url value="/board/addTopic.html" />" method="post" role="form">
+  		<div class="form-group">
+    		<!-- <label for="title"><h3>标题</h3></label> -->
+    		<input type="text" class="form-control" id="title" name="topicTitle" placeholder="標題" value="${topic.topicTitle}">
+    		</input>
+  		</div>
+		
+        <textarea class="textarea form-control" name="mainPost.postText" placeholder="輸入內容 ..." style="width: 1140px; height: 200px">
+        	${topic.mainPost.postText}
+        </textarea>
+					  		
+  		<input type="hidden" name="boardId" value="${boardId}"> 
+    	<input class="btn btn-primary btn-lg" type="submit" value="發佈">
+  	</form>	
+    
+    <script>
+    	$('.textarea').wysihtml5();
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    	$(prettyPrint);
+	</script>
+    
+
 </body>
 </html>
+
