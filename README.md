@@ -13,7 +13,11 @@ Screen Shot
 
 项目框架简介
 -------------------
-**[GREEN DEMO](HTTP://112.124.114.112:8080/GREEN/)**
+**[Green DEMO](HTTP://112.124.114.112:8080/Green/)**
+
+`测试帐号：  
+用户名: admin  
+密码: admin ` 
 
 该项目基于Maven3.0构建。  
 
