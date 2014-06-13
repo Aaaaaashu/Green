@@ -23,15 +23,15 @@ public class LoginLog extends BaseDomain {
 	@Column(name = "login_log_id")
 	private int loginLogId;
 	
-	@Column(name = "login_datetime")
-	private Date loginDate;
-	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
     private User user;
 	
+	@Column(name = "ip")
 	private String ip;
 	
+	@Column(name = "login_datetime")
+	private Date loginDate;
 	
 	public int getLoginLogId() {
 		return loginLogId;

@@ -11,10 +11,6 @@ import com.green.domain.LoginLog;
 import com.green.domain.User;
 import com.green.exception.UserExistException;
 
-/**
- * 用户管理服务器，负责查询用户、注册用户、锁定用户等操作
- *
- */
 @Service
 public class UserService {
 	

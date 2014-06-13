@@ -17,7 +17,7 @@
 	<!-- 对模型视图名称的解析，在请求时模型视图名称添加前后缀 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" />
+		p:prefix="/" p:suffix=".jsp" />
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		p:defaultEncoding="utf-8" />
@@ -27,7 +27,7 @@
 		p:basename="i18n/messages" />
 
     <!--WEB异常解析处理-->
-	<bean id="exceptionResolver" class="com.green.web.ForumHandlerExceptionResolver">
+<!-- 	<bean id="exceptionResolver" class="com.green.web.ForumHandlerExceptionResolver">
 		<property name="defaultErrorView">
 			<value>fail</value>
 		</property>
@@ -36,5 +36,5 @@
 				<prop key="java.lang.RuntimeException">fail</prop>
 			</props>
 		</property>
-	</bean>
+	</bean> -->
 </beans>  

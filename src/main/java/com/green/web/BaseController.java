@@ -7,18 +7,6 @@ import com.green.cons.CommonConstant;
 import com.green.domain.User;
 import com.green.exception.NotLoginException;
 
-/**
- * 
- * <br>
- * <b>类描述:</b>
- * 
- * <pre>
- * 所有Controller的基类
- * </pre>
- * 
- * @see
- * @since
- */
 public class BaseController {
 	protected static final String ERROR_MSG_KEY = "errorMsg";
 
@@ -49,7 +37,7 @@ public class BaseController {
 	 * 
 	 * @param request
 	 * @param url
-	 *            以"/"打头的URL地址
+	 *         以"/"打头的URL地址
 	 * @return 基于应用程序的url绝对路径
 	 */
 	public final String getAppbaseUrl(HttpServletRequest request, String url) {
@@ -57,6 +45,4 @@ public class BaseController {
 		Assert.isTrue(url.startsWith("/"), "必须以/打头");
 		return request.getContextPath() + url;
 	}
-	
-	
 }

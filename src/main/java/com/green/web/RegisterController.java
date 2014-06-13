@@ -17,30 +17,14 @@ import com.green.domain.User;
 import com.green.exception.UserExistException;
 import com.green.service.UserService;
 
-/**
- * 
- * <br>
- * <b>类描述:</b>
- * 
- * <pre>
- * 用户注册的Action
- * </pre>
- * 
- * @see
- * @since
- */
 @Controller                   
 public class RegisterController extends BaseController {
-	/**
-	 * 自动注入
-	 */
+
 	@Autowired
 	private UserService userService;
 
-
-	
 	/**
-	 * 用户登录
+	 * 用户注册
 	 * @param request
 	 * @param response
 	 * @param user
@@ -49,7 +33,7 @@ public class RegisterController extends BaseController {
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ModelAndView register(HttpServletRequest request,User user){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/success");
+		mav.setViewName("forward:/index.jsp");
 		try {
 			userService.register(user);
 		} catch (UserExistException e) {
@@ -59,5 +43,4 @@ public class RegisterController extends BaseController {
 		setSessionUser(request,user);
 		return mav;
 	}
-	
 }

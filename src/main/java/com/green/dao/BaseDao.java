@@ -14,13 +14,12 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.util.Assert;
 
-/**
- * DAO基类，其它DAO可以直接继承这个DAO，不但可以复用共用的方法，还可以获得泛型的好处。
- */
 public class BaseDao<T>{
 	private Class<T> entityClass;
+	
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
+	
 	/**
 	 * 通过反射获取子类确定的泛型类
 	 */
@@ -142,16 +141,16 @@ public class BaseDao<T>{
 	/**
 	 * 创建Query对象. 对于需要first,max,fetchsize,cache,cacheRegion等诸多设置的函数,可以在返回Query后自行设置.
 	 * 留意可以连续设置,如下：
-	 * <pre>
+	 * 
 	 * dao.getQuery(hql).setMaxResult(100).setCacheable(true).list();
-	 * </pre>
+	 * 
 	 * 调用方式如下：
-	 * <pre>
+	 * 
 	 *        dao.createQuery(hql)
 	 *        dao.createQuery(hql,arg0);
 	 *        dao.createQuery(hql,arg0,arg1);
 	 *        dao.createQuery(hql,new Object[arg0,arg1,arg2])
-	 * </pre>
+	 * 
 	 *
 	 * @param values 可变参数.
 	 */

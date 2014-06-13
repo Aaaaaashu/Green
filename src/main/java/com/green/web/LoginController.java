@@ -3,7 +3,6 @@ package com.green.web;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
@@ -15,25 +14,10 @@ import com.green.cons.CommonConstant;
 import com.green.domain.User;
 import com.green.service.UserService;
 
-/**
- * 
- * <br>
- * <b>类描述:</b>
- * 
- * <pre>
- *   论坛管理，这部分功能由论坛管理员操作，包括：创建论坛版块、指定论坛版块管理员、
- * 用户锁定/解锁。
- * </pre>
- * 
- * @see
- * @since
- */
 @Controller
 @RequestMapping("/login")
 public class LoginController extends BaseController {
-	/**
-	 * 自动注入
-	 */
+
 	@Autowired
 	private UserService userService;
 	
