@@ -1,0 +1,62 @@
+
+.delete-board {
+	margin-top: 130px;
+	margin-bottom: 60px;
+}
+
+.add-board {
+	margin-bottom: 125px;
+}
+
+.set-manager,
+.user-lock {
+	margin-top: 130px;
+	margin-bottom: 125px;
+}
+
+.delete-board h4,
+.add-board h4,
+.set-manager h4 {
+	margin-bottom: 10px;
+}
+
+.add-board input {
+	margin-bottom: 15px;
+}
+
+table {
+	table-layout:fixed; 
+}
+
+.table>thead>tr>th, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+	vertical-align:middle;
+}
+
+.table-hover>tbody>tr:hover>td, 
+.table-hover>tbody>tr:hover>th {
+	background-color: rgba(231, 231, 231, 0.7);
+}
+
+.th-1, .td-1 { width: 10%; text-align: center; }
+.th-2, .td-2 { width: 60%; text-align: center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.th-3, .td-3 { width: 10%; text-align: center; }
+.th-4, .td-4 { width: 20%; text-align: center; }
+
+.lock-th-1, .lock-td-1 { width: 50%; text-align: center; }
+.lock-th-2, .lock-td-2 { width: 50%; text-align: center; }
+
+select.btn.btn-default {
+	width: 75px;
+	height: 34px;
+}
+
+.save-manager {
+	margin-left: 15px;
+}
+
+
