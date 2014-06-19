@@ -13,7 +13,7 @@ Screen Shot
 
 项目框架简介
 -------------------
-**[Green DEMO](HTTP://112.124.114.112:8080/Green/)** （建议使用Chrome浏览）
+**[Green DEMO](HTTP://112.124.114.112:8080/Green/)** （建议使用Chrome浏览器访问）
 
 `测试帐号：  
 用户名: admin  
